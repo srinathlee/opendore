@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/fontawesome.min.css" integrity="sha384-z4tVnCr80ZcL0iufVdGQSUzNvJsKjEtqYZjiQrrYKlpGow+btDHDfQWkFjoaz/Zr" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <!--___________________________________________________main page________________________________________________________________-->
+    <div id="page_1">
+
+        <div>
+            <ul class="nav ">
+                <li><img class="logo" src="https://res.cloudinary.com/dldcgj0mx/image/upload/v1666894413/newlogo-removebg-preview_cmdxld.png" />
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal_1">
+                            Login
+                        </button>
+                        <div class="modal fade" id="exampleModal_1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5">Login</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="modal-box">
+                                            <div class="modal-body">
+                                                <div class="form-group">
+                                                    <input id="entered_user_mail" type="email" class="form-control" placeholder="Please Enter email address">
+                                                </div>
+                                                <div class="form-group">
+                                                    <input id="entered_user_password" type="password" class="form-control" placeholder="Password">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                        <button id="redirect_hostelview" type="button" class="btn btn-primary" data-bs-dismiss="modal">Login</button>
+
+                                    </div>
+                                    <p id="login_message" class="text-center"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div id="img-container">
+
+            <div class="card1">
+
+                <div class="top_text_container">
+                    <h1 class="quote justify-content-start"> Let's find a cozy accommodation<br> for you!</h1>
+                </div>
+
+                <div class="registration_form">
+                    <form class="user_form">
+                        <div class="name_container">
+                            <label class="form_name_label" for="">First Name</label><br>
+                            <input id="valid_user_name" class="form_name_input" type="text" placeholder="enter your name" />
+                        </div>
+                        <div class="name_container">
+                            <label class="form_name_label" for="">E-Mail</label><br>
+                            <input id="valid_user_mail" class="form_name_input" type="email" placeholder="enter your E-mail" />
+                        </div>
+                        <div class="name_container">
+                            <label class="form_name_label" for="">Mobile Number</label><br>
+                            <input id="valid_user_number" class="form_name_input" type="text" placeholder="enter your Mobile Number" />
+                        </div>
+                        <div class="name_container">
+                            <label class="form_name_label" for="">Password</label><br>
+                            <input id="valid_user_password" class="form_name_input" type="password" placeholder="enter your Password" />
+                        </div>
+                        <div class="button_container name_container">
+                            <button id="user_registration" class="btn btn-primary">Register</button>
+
+                        </div>
+                        <p id="registration_message"></p>
+                    </form>
+                </div>
+            </div>
+
+
+
+            <div class="mar">
+                <div>
+                    <h1 class="ali">Find hostels that you deserve....!</h1>
+                </div>
+                <div class="d-flex flex-column mar">
+                    <div class="d-flex flex-row mar">
+                        <div class="card2 marimg">
+                            <div class="geeks">
+                                <img src="https://res.cloudinary.com/dmvjzhqyr/image/upload/v1666288905/OpenDoor/inner-image2_odmard.jpg" alt="Avatar" style="width:100%">
+                            </div>
+                            <div class="container">
+                                <h4 class="text"><b>KyGo Hostels</b></h4>
+                                <p><i class="fa fa-location-dot"></i> Hyderabad</p>
+                            </div>
+                        </div>
+                        <div class="card2 marimg">
+                            <div class="geeks">
+                                <img src="https://res.cloudinary.com/dmvjzhqyr/image/upload/v1666288896/OpenDoor/inner-image1_lhotof.jpg" alt="Avatar" style="width:100%">
+                            </div>
+                            <div class="container">
+                                <h4 class="text"><b>Slackpackr</b></h4>
+                                <p><i class="fa fa-location-dot"></i> Begumpet,Hyd</p>
+                            </div>
+                        </div>
+                        <div class="card2 marimg">
+                            <div class="geeks">
+                                <img src="https://res.cloudinary.com/dmvjzhqyr/image/upload/v1666288922/OpenDoor/inner-image3_es2n7l.jpg" alt="Avatar" style="width:100%">
+                            </div>
+                            <div class="container">
+                                <h4 class="text"><b>Elysium</b></h4>
+                                <p><i class="fa fa-location-dot"></i> Madhapur,Hyd</p>
+                            </div>
+                        </div>
+                        <div class="card2 marimg">
+                            <div class="geeks">
+                                <img src="https://res.cloudinary.com/dmvjzhqyr/image/upload/v1666709024/OpenDoor/gcem-hostel-facility_vrk6nr.jpg" alt="Avatar" style="width:100%">
+                            </div>
+                            <div class="container">
+                                <h4 class="text"><b>Beehive</b></h4>
+                                <p><i class="fa fa-location-dot"></i> gachibowli,Hyd</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="d-flex flex-row mar">
+                        <div class="card2 marimg">
+                            <div class="geeks">
+                                <img src="https://res.cloudinary.com/dmvjzhqyr/image/upload/v1666709033/OpenDoor/mokshhostelimage1_x3jdiq.jpg" alt="Avatar" style="width:100%">
+                            </div>
+                            <div class="container">
+                                <h4 class="text"><b>varniush</b></h4>
+                                <p><i class="fa fa-location-dot"></i> kukatpally,Hyd</p>
+                            </div>
+                        </div>
+                        <div class="card2 marimg">
+                            <div class="geeks">
+                                <img src="https://res.cloudinary.com/dmvjzhqyr/image/upload/v1666709047/OpenDoor/mokshhostelimage2_kr1lmk.jpg" alt="Avatar" style="width:100%">
+                            </div>
+                            <div class="container">
+                                <h4 class="text"><b>Mahas</b></h4>
+                                <p><i class="fa fa-location-dot"></i> Ammerpet,Hyd</p>
+                            </div>
+                        </div>
+                        <div class="card2 marimg">
+                            <div class="geeks">
+                                <img src="https://res.cloudinary.com/dmvjzhqyr/image/upload/v1666709054/OpenDoor/mokshhostelimage3_bl9clv.jpg" alt="Avatar" style="width:100%">
+                            </div>
+                            <div class="container">
+                                <h4 class="text"><b>Subham</b></h4>
+                                <p><i class="fa fa-location-dot"></i> kompally,Hyd</p>
+                            </div>
+                        </div>
+                        <div class="card2 marimg">
+                            <div class="geeks">
+                                <img src="https://res.cloudinary.com/dmvjzhqyr/image/upload/v1666709064/OpenDoor/mokshhostelimage4_mehlgy.jpg" alt="Avatar" style="width:100%">
+                            </div>
+                            <div class="container">
+                                <h4 class="text"><b>Zolo</b></h4>
+                                <p><i class="fa fa-location-dot"></i> Hi-tech city,Hyd</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="homepage_facilities">
+                <div class="card3 d-flex flex-row justify-content-space-between shado ">
+                    <img src="https://res.cloudinary.com/dmvjzhqyr/image/upload/v1666343577/OpenDoor/living_standards_akrmyb.jpg" class="image1" />
+                    <div>
+                        <h4 class="king">Standard Hostels</h4>
+                        <p class="pking">* OpenDoor hostel staff to be trained to meet the needs of the guests<br>
+                            * Hostel should display Information about OpenDoor & its Membership and other services at the reception<br>
+                            * OpenDoor hostels meets local Health and Building Safety Regulations<br>
+                            * All surfaces, furniture, bedding and equipment, are cleaned<br>
+                            * Proper care is taken for any seepage, leakage or smell in the hostel<br>
+                            *OpenDoor conducts regular inspection programmes to check whether these quality standards are followed and ensures that customer service standards are met.</p>
+                    </div>
+                </div>
+                <div class="card3 d-flex flex-row justify-content-space-between shado">
+
+                    <div>
+                        <h4 class="king">Quality Food</h4>
+                        <p class="pking">* OpenDoor hostel staff to be trained to meet the needs of the guests<br>
+                            * Hostel should display Information about OpenDoor & its Membership and other services at the reception<br>
+                            * OpenDoor hostels meets local Health and Building Safety Regulations<br>
+                            * All surfaces, furniture, bedding and equipment, are cleaned<br>
+                            * Proper care is taken for any seepage, leakage or smell in the hostel<br>
+                            *OpenDoor conducts regular inspection programmes to check whether these quality standards are followed and ensures that customer service standards are met.</p>
+                    </div>
+                    <img src="https://res.cloudinary.com/dmvjzhqyr/image/upload/v1666345859/OpenDoor/food_ztd6sr.jpg" class="image1" />
+                </div>
+                <div class="card3 d-flex flex-row justify-content space-around shado">
+                    <img src="https://res.cloudinary.com/dmvjzhqyr/image/upload/v1666345370/OpenDoor/studyhall_h6blmp.png" class="image1" />
+                    <div>
+                        <h4 class="king">Study Places</h4>
+                        <p class="pking">* OpenDoor hostel staff to be trained to meet the needs of the guests<br>
+                            * Hostel should display Information about OpenDoor & its Membership and other services at the reception<br>
+                            * OpenDoor hostels meets local Health and Building Safety Regulations<br>
+                            * All surfaces, furniture, bedding and equipment, are cleaned<br>
+                            * Proper care is taken for any seepage, leakage or smell in the hostel<br>
+                            *OpenDoor conducts regular inspection programmes to check whether these quality standards are followed and ensures that customer service standards are met.</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div>
+                <h1 class="why justify-content-between">Why to Choose us....!</h1>
+            </div>
+            <div class="whyclass">
+                <div class=" whychooseus d-flex flex-row justify-content-around">
+
+                    <div class="whycard  whycard1 d-flex flex-column">
+                        <div>
+                            <img src="https://res.cloudinary.com/dmvjzhqyr/image/upload/v1666377611/OpenDoor/users_nmrh8c.jpg" class="whyimg" />
+                        </div>
+                        <div class="whylakh">
+                            <h4 class="whylakh-1">80 Lakh+</h4>
+                        </div>
+                        <div>
+                            <h6 class="whylakh whylakh1">Users</h6>
+                        </div>
+                    </div>
+                    <div class="whycard d-flex flex-column">
+                        <div>
+                            <img src="https://res.cloudinary.com/dmvjzhqyr/image/upload/v1666377952/OpenDoor/reviews_narik3.jpg" class="whyimg" />
+                        </div>
+                        <div class="whylakh">
+                            <h4 class="whylakh-1">20 Lakh+</h4>
+                        </div>
+                        <div>
+                            <h6 class="whylakh whylakh1">Reviews</h6>
+                        </div>
+                    </div>
+                    <div class="whycard whycard2 d-flex flex-column">
+                        <div>
+                            <img src="https://res.cloudinary.com/dmvjzhqyr/image/upload/v1666378026/OpenDoor/hostels_gp0dfn.jpg" class="whyimg" />
+                        </div>
+                        <div class="whylakh">
+                            <h4 class="whylakh-1">1 Lakh+</h4>
+                        </div>
+                        <div>
+                            <h6 class="whylakh whylakh1">Hostels Registered</h6>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <section id="bottom">
+                <div class="bottom-text">
+                    <h1>Hostel days are most memorable Days</h1>
+                    <p>Discover Your Desired Living Destination</p>
+                </div>
+                <div class="bottom-row">
+                    <div class="bottom-left">
+                        <h1>Main Section</h1>
+                        <p><a href="#">Packages Tours</a></p>
+                        <p><a href="#">Top Departure Tours</a></p>
+                        <p><a href="#">States of India</a></p>
+                        <p><a href="#">Corperate Tour</a></p>
+                        <p><a href="#">Book a Hotel</a></p>
+                    </div>
+                    <div class="bottom-right">
+                        <h1>Legal Policy</h1>
+                        <p><a href="#">Terms & Conditions</a></p>
+                        <p><a href="#">Disclaimer</a></p>
+                        <p><a href="#">Privacy Policy</a></p>
+                        <p><a href="#">Share Your Travel Experiances</a></p>
+                    </div>
+                </div>
+                <div class="app">
+                    <h1>Download Our App</h1>
+                    <i class="fa fa-google-plus"></i>
+                </div>
+                <div class="social-links">
+                    <i class="fa fa-facebook"></i>
+                    <i class="fa fa-instagram"></i>
+                    <i class="fa fa-twitter"></i>
+                    <i class="fa fa-youtube"></i>
+                    <p>OpenDoor@2022</p>
+                </div>
+            </section>
+
+        </div>
+
+
+
+    </div>
+
+
+    <!-- ____________________________________________________explore page___________________________________________________________________________-->
+
+
+    <div id="page_2" class="make_page_none">
+        <div id="main_page_bg">
+            <!-- navbar ______________________________________________________________________________________________________-->
+            <nav class="nav-bar">
+                <img class="logo" src="https://res.cloudinary.com/dldcgj0mx/image/upload/v1666894413/newlogo-removebg-preview_cmdxld.png" />
+
+                <div class="icon">
+                    <a>
+                        <i class="fa-solid fa-bars"></i>
+                    </a>
+                </div>
+                <div class="nav-links d_none" id="nav">
+                    <ul>
+                        <li id="redirect_homepage"><a href="#">Home</a></li>
+                        <li id="open_profile_button" class="user-profile-icon-cntainer"><i class="fa-regular fa-user"></i></li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- main pag container ______________________________________________________________________________________________________-->
+            <div class="main-page-bg-container">
+                <!-- left part ______________________________________________________________________________________________________-->
+                <div class="left-bg-container">
+                    <div class="filters-bg-container">
+
+                        <div class=" filter filter-1">
+                            <h1 class=" filter-title-style filter-heading-1">Ratings</h1>
+                            <div class="filter-value-1">
+                                <div class="each-value-container">
+                                    <label class="value-label">3</label>
+                                    <input id="rating_3Lg" class="filter-values value-label" value=5 name="rate" type="radio" />
+                                </div>
+                                <div class="each-value-container">
+                                    <label class="value-label">4</label>
+                                    <input id="rating_4Lg" class="filter-values  value-label" value=4 name="rate" type="radio" />
+                                </div>
+                                <div class="each-value-container">
+                                    <label class="value-label">5</label>
+                                    <input id="rating_5Lg" class="filter-values  value-label" value=3 name="rate" type="radio" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class=" filter filter-2">
+                            <h1 class=" filter-title-style filter-heading-2">Location</h1>
+                            <input id="locationFilter-lg" class="   out filter-search-value-2" type="text" />
+                        </div>
+
+                        <div class=" filter filter-3">
+                            <h1 class=" filter-title-style filter-heading-3">Bed-sharing</h1>
+                            <div class="filter-value-1">
+                                <div class="each-value-container">
+                                    <label class="value-label">2</label>
+                                    <input id="bed-2Lg" class="filter-values value-label" value=2 name="bed" type="radio" />
+                                </div>
+                                <div class="each-value-container">
+                                    <label class="value-label">3</label>
+                                    <input id="bed-3Lg" class="filter-values  value-label" value=3 name="bed" type="radio" />
+                                </div>
+                                <div class="each-value-container">
+                                    <label class="value-label">4</label>
+                                    <input id="bed-4Lg" class="filter-values  value-label" value=4 name="bed" type="radio" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class=" filter filter-4">
+                            <h1 class=" filter-title-style filter-heading-4">WiFi-avalibality</h1>
+                            <input id="wifiFilter-lg" class=" filter-value-4" type="checkbox" />
+                        </div>
+
+                        <div class=" filter filter-5">
+                            <h1 class=" filter-title-style filter-heading-5">Hot-Water</h1>
+                            <input id="waterFilter-lg" class="filter-value-4" type="checkbox" />
+                        </div>
+                    </div>
+
+                    <div id="" class="filterLarge">
+                        <button id="filterLarge" class="btn btn-primary">Filter</button>
+
+                    </div>
+
+
+                </div>
+                <!-- right part ______________________________________________________________________________________________________-->
+
+                <div class="right-bg-container">
+
+
+                    <div id="filter-icon-container" class="filter-icon-container ">
+                        <!-- Button trigger modal -->
+                        <button type="button" class="icon-top" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                            <i class=" filter-icon fa-solid fa-arrow-down-wide-short"></i>
+                        </button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Filter </h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="popup-left-bg-container">
+                                            <div class="filters-bg-container">
+
+                                                <div class=" filter filter-1">
+                                                    <h1 class=" filter-title-style filter-heading-1">Ratings</h1>
+                                                    <div class="filter-value-1">
+                                                        <div class="each-value-container">
+                                                            <label class="value-label">3</label>
+                                                            <input id="rating_3" class="filter-values value-label" value=5 name="rate" type="radio" />
+                                                        </div>
+                                                        <div class="each-value-container">
+                                                            <label class="value-label">4</label>
+                                                            <input id="rating_4" class="filter-values  value-label" value=4 name="rate" type="radio" />
+                                                        </div>
+                                                        <div class="each-value-container">
+                                                            <label class="value-label">5</label>
+                                                            <input id="rating_5" class="filter-values  value-label" value=3 name="rate" type="radio" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class=" filter filter-2">
+                                                    <h1 class=" filter-title-style filter-heading-2">Location</h1>
+                                                    <input id="locationFilter-sm" class="filter-search-value-2" type="text" />
+                                                </div>
+
+                                                <div class=" filter filter-3">
+                                                    <h1 class=" filter-title-style filter-heading-3">Bed-sharing</h1>
+                                                    <div class="filter-value-1">
+                                                        <div class="each-value-container">
+                                                            <label class="value-label">2</label>
+                                                            <input id="bed-2" class="filter-values value-label" value=2 name="bed" type="radio" />
+                                                        </div>
+                                                        <div class="each-value-container">
+                                                            <label class="value-label">3</label>
+                                                            <input id="bed-3" class="filter-values  value-label" value=3 name="bed" type="radio" />
+                                                        </div>
+                                                        <div class="each-value-container">
+                                                            <label class="value-label">4</label>
+                                                            <input id="bed-4" class="filter-values  value-label" value=4 name="bed" type="radio" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class=" filter filter-4">
+                                                    <h1 class=" filter-title-style filter-heading-4">WiFi-avalibality</h1>
+                                                    <input id="wifiFilter-sm" class="filter-value-4" type="checkbox" />
+                                                </div>
+
+                                                <div class=" filter filter-5">
+                                                    <h1 class=" filter-title-style filter-heading-5">Hot-Water</h1>
+                                                    <input id="waterFilter-sm" class="filter-value-4" type="checkbox" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                        <button id="makefilter" type="button" class="btn btn-primary" data-bs-dismiss="modal">Filter</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <div id="searchBgContainer" class="search-bg-container">
+                        <input id="searchbox" placeholder="search with name" class="search-box" type="text">
+                        <button id="clearFilterButton" class="search-button"><i class="fa-solid fa-house"></i></button>
+                    </div>
+
+                    <div id="cards-bg-container" class="cards-bg-container">
+
+
+                    </div>
+                    <div id="chat_bot_pop_button" class="chat_bot_pop_button ">
+                        <i class=" chat_icon fa-solid fa-comments"></i>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ______________________________________ hostel detail view _______________________________________________________-->
+        <div id="display_hostel_detail_view" class="make_none">
+
+            <div class="card_detail_view_container">
+
+
+                <div class="hostel_img_container">
+                    <img id="detail_hostel_image" class="hostel_image" src="https://res.cloudinary.com/dldcgj0mx/image/upload/v1666429736/hostel-5_siu3kp.jpg">
+                </div>
+                <div class="hostel_details_container">
+                    <h1 id="detail_name_of_hostel" class="name_of_hostel">MallaReddy Boys Hostel</h1>
+                    <a class="location_address_of_hostel"><i class="hostel_location_icon fa-sharp fa-solid fa-location-dot"></i><span id="detail_address_of_hostel" class="address_of_hostel">Near vivekananda statue , maisammaguds , kompally 400005</span></a>
+                    <p id="detail_description_of_hostel" class="description_of_hostel">provide comfortable air-cooled hostel accommodation
+                        separately for boys and girls in the campus. The hostels are well equipped with
+                        all the modern amenities and are under the charge of caring and experienced Wardens.
+                        Special features like ultramodern gymnasium and sports facilities, internet center,
+                        24 hrs internet connectivity in the rooms through WI-FI, solar water heating system,
+                        recreation room, drinking water treatment plant, generators for power backup and tight
+                        security arrangements ensure a pleasant stay allowing students to focus on academics</p>
+                    <p id="detail_prise_of_hostel" class="prise_of_hostel">4,500/-</p>
+                    <p id="hostel_contact">contack us : &nbsp; 995****768</p>
+                    <p class="detain_hostel_rating"><span id="detail_rating" class="starsss">&#9734;&#9734;&#9734;&#9734;&#9734; </span>rating as per our website</p>
+                </div>
+                <div class="hostel_facilities_container">
+
+                    <div class="facility-1">
+                        <h1 class="facility_heading">Bed Sharing Avalibality</h1>
+                        <p class="available_bed_share">[ <span class="share">2</span> share <span class="share">3</span> share <span class="share">4</span> share ] </p>
+                    </div>
+
+                    <div class="facility-1">
+                        <h1 class="facility_heading">WiFi Avalibality</h1>
+                        <p class="available_wifi"> we provide wifi facilities to the students. So, donot need to
+                            worry but make sure that the hostel you will be staying in has wifi facility
+                            without internet you can nit download and even study from youtube and other related stuff</p>
+                    </div>
+
+                    <div class="facility-1">
+                        <h1 class="facility_heading">Hot Water Avalibality</h1>
+                        <p class="available_hotwater">We provide hot water with the help of solar heater which is the perfect for student life style</p>
+                    </div>
+
+                    <div class="facility-1">
+                        <h1 class="facility_heading">Bed Sharing Avalibality</h1>
+                        <p class="washing_mechine">washing mechines are avalible for cleaning the cloths and we will
+                            not charge any extra amount this will be included in the hostel fee</p>
+                    </div>
+
+                    <div class="rules_container">
+                        <h1 class="rules_heading">Rules and Regulations</h1>
+                        <p class="rules">
+                            Smoking, Alcohol & Narcotic consumption is strictly prohibited in and around the Hostel premises. Strict action will be taken against offenders.
+                            Strict adherence to the prescribed dress code is required. Decency in dressing & demeanor is a must.
+                            Loitering in the Hostel campus during the class hours will not be appreciated.
+                            The Management & Staff will not be responsible for personal belongings.
+                            Late comers will be penalized.
+                            Students must keep the Campus & Rooms clean. Defacing walls, equipment, furniture etc., is strictly prohibited.
+                            Birthday/Other Celebrations are strictly prohibited in Hostel.
+                            Students must turn off all the electrical equipments & lights before leaving their rooms.
+                            Students are not allowed to use electric stoves, heaters etc in rooms except in designated places.
+                        </p>
+
+
+                    </div>
+
+
+
+                    <div class="view_more_button">
+
+                        <div>
+
+                            Button trigger modal
+                            <button type="button" class="book_hostel_button" data-bs-toggle="modal" data-bs-target="#exampleModal_2">
+                                Book Hostel
+                            </button>
+
+                            Modal
+                            <div class="modal fade" id="exampleModal_2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Enter Your Details</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="book_detail">
+                                                <label class="book_name_label">Name&nbsp;</label>
+                                                <input class="book_name" type="text" placeholder="Enter Your Name">
+                                            </div>
+                                            <div class="book_detail">
+                                                <label class="book_email_label">E-mail&nbsp;</label>
+                                                <input class="book_email" type="text" placeholder="Enter Your E-Mail">
+                                            </div>
+                                            <div class="book_detail">
+                                                <label class="book_mobile_label">Mobile</label>
+                                                <input class="book_mobile" type="text" placeholder="Enter Your Mobile Number">
+                                            </div>
+
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button id="book_hostel" type="button" class="btn btn-primary" data-bs-dismiss="modal">Pay Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <button id="view_more_button" class="book_hostel_button">Back</button>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+    <!--    ________________________________________________________profile page___________________________________________________
+ 
+  -->
+    <div id="page_3" class="left-part-bg-container profile-bg-container make_page_none">
+
+        <div class="user_profile_card_container">
+            <div class="top-container">
+                <img class="user-image" src="https://res.cloudinary.com/dldcgj0mx/image/upload/v1666260193/user-profile_rjbfna.webp" />
+                <h1 class="user-name" id="updated_user_id"></h1>
+            </div>
+
+            <div class="user-personal-details-container">
+                <ul class="list-of-details">
+                    <li class="like-font user-first-title">FIRST NAME : <span id="updated_user_name" class="first-name-value"></span></li>
+                    <li class="like-font user-address">E-Mail : <span id="updated_user_mail" class="updated_user_mail"></span></li>
+                    <li class="like-font user-address">MOBILE : <span id="updated_user_mobile" class="updated_user_mobile"></span></li>
+
+                </ul>
+                <div class="user-payment-details">
+                    <h1 class="amount-paid-title">AMOUNT PAID : <span class="amount-paid-status">3000/-</span></h1>
+                    <h1 class="amount-due-title">AMOUNT DUE : <span class="amount-due-status">1000</span></h1>
+
+                </div>
+
+            </div>
+
+            <div>
+                <button id="back_to_explore" class="backbutton">Back</button>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <!-- ____________________________________________________chat box _______________________________________________________ -->
+
+    <div id="chat_bot_message_container" class="p-2 make_page_none">
+        <h1 class="text-center chatbot-heading">Meet our Chatbot</h1>
+        <img class="image" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/chatbot-bot-img.png" />
+        <div id="chatContainer" class="chat-container"></div>
+        <div class="d-flex flex-row justify-content-end">
+            <img class="image" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/chatbot-boy-img.png" />
+        </div>
+        <div class="d-flex flex-row justify-content-center fixed-bottom">
+            <input id="userInput" class="user-input" />
+            <button class="send-msg-btn" id="sendMsgBtn">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+            <button class="send-msg-btn" id="quit_message_to_detail">
+                Quit
+            </button>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
